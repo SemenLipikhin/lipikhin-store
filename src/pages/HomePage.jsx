@@ -23,7 +23,7 @@ function HomePage() {
 
         <div className="hero__visual">
           <img
-            src="/images/categories/women.jpg"
+            src={`${import.meta.env.BASE_URL}images/categories/women.jpg`}
             alt="Модель в премиальном образе"
           />
           <div className="hero__badge">
@@ -36,7 +36,7 @@ function HomePage() {
       <section className="home__categories" aria-label="Коллекции магазина">
         <a href="/catalog/men" className="category-card">
           <img
-            src="/images/categories/men.jpg"
+            src={`${import.meta.env.BASE_URL}images/categories/men.jpg`}
             alt="Модель в одежде мужской коллекции"
             className="category-card__image"
           />
@@ -48,7 +48,7 @@ function HomePage() {
 
         <a href="/catalog/women" className="category-card">
           <img
-            src="/images/categories/women.jpg"
+            src={`${import.meta.env.BASE_URL}images/categories/women.jpg`}
             alt="Модель в одежде женской коллекции"
             className="category-card__image"
           />
