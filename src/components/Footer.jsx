@@ -4,32 +4,32 @@ function Footer() {
   return (
     <footer className="footer">
       <div className="container footer__inner">
-        <a className="footer__brand" href="/">
+        <a className="footer__brand" href={`${import.meta.env.BASE_URL}`}>
           LIPIKHIN
         </a>
 
         <nav className="footer__nav" aria-label="Магазин">
           <p className="footer__heading">Магазин</p>
-          <a className="footer__link" href="/catalog/men">
+          <a className="footer__link" href={`${import.meta.env.BASE_URL}catalog/men`}>
             Мужское
           </a>
-          <a className="footer__link" href="/catalog/women">
+          <a className="footer__link" href={`${import.meta.env.BASE_URL}catalog/women`}>
             Женское
           </a>
         </nav>
 
         <nav className="footer__nav" aria-label="Помощь">
           <p className="footer__heading">Помощь</p>
-          <a className="footer__link" href="/delivery">
+          <a className="footer__link" href={`${import.meta.env.BASE_URL}delivery`}>
             Доставка
           </a>
-          <a className="footer__link" href="/returns">
+          <a className="footer__link" href={`${import.meta.env.BASE_URL}returns`}>
             Возврат
           </a>
-          <a className="footer__link" href="/size-guide">
+          <a className="footer__link" href={`${import.meta.env.BASE_URL}size-guide`}>
             Размеры
           </a>
-          <a className="footer__link" href="/contacts">
+          <a className="footer__link" href={`${import.meta.env.BASE_URL}contacts`}>
             Контакты
           </a>
         </nav>

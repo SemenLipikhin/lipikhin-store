@@ -3,86 +3,54 @@ import "./HomePage.css";
 function HomePage() {
   return (
     <main className="home container">
-      <section className="hero">
+      <section className="hero" aria-labelledby="hero-title">
         <div className="hero__content">
           <p className="hero__eyebrow">Curated essentials</p>
-          <h1 className="hero__title">Luxury in every line.</h1>
+          <h1 id="hero-title" className="hero__title">
+            Luxury in every line.
+          </h1>
           <p className="hero__text">
             Классическая элегантность, современная форма и материалы, которые
             говорят без лишних слов.
           </p>
-          <div className="hero__actions">
-            <a href="/collections" className="button button--primary">
-              Смотреть коллекции
+          <nav className="hero__actions" aria-label="Выбор коллекции">
+            <a
+              href={`${import.meta.env.BASE_URL}catalog/men`}
+              className="hero__collection-link"
+            >
+              Мужское
             </a>
-            <a href="/catalog/women" className="button button--secondary">
-              Женская линия
+            <a
+              href={`${import.meta.env.BASE_URL}catalog/women`}
+              className="hero__collection-link"
+            >
+              Женское
             </a>
-          </div>
+          </nav>
         </div>
 
         <div className="hero__visual">
-          <img
-            src={`${import.meta.env.BASE_URL}images/categories/women.jpg`}
-            alt="Модель в премиальном образе"
-          />
-          <div className="hero__badge">
-            <span>Autumn 2026</span>
-            <strong>Collection</strong>
+          <div className="hero__photo hero__photo--men">
+            <img
+              src={`${import.meta.env.BASE_URL}images/categories/men.jpg`}
+              alt="Модель в одежде мужской коллекции LIPIKHIN"
+              width="1640"
+              height="2159"
+              decoding="async"
+            />
           </div>
+          <div className="hero__photo hero__photo--women">
+            <img
+              src={`${import.meta.env.BASE_URL}images/categories/women.jpg`}
+              alt="Модель в одежде женской коллекции LIPIKHIN"
+              width="1024"
+              height="1280"
+              fetchPriority="high"
+              decoding="async"
+            />
+          </div>
+          <p className="hero__caption">Autumn 2026 <span>Collection</span></p>
         </div>
-      </section>
-
-      <section className="home__categories" aria-label="Коллекции магазина">
-        <a href="/catalog/men" className="category-card">
-          <img
-            src={`${import.meta.env.BASE_URL}images/categories/men.jpg`}
-            alt="Модель в одежде мужской коллекции"
-            className="category-card__image"
-          />
-          <div className="category-card__content">
-            <span className="category-card__title">Мужское</span>
-            <span className="category-card__action">Смотреть коллекцию →</span>
-          </div>
-        </a>
-
-        <a href="/catalog/women" className="category-card">
-          <img
-            src={`${import.meta.env.BASE_URL}images/categories/women.jpg`}
-            alt="Модель в одежде женской коллекции"
-            className="category-card__image"
-          />
-          <div className="category-card__content">
-            <span className="category-card__title">Женское</span>
-            <span className="category-card__action">Смотреть коллекцию →</span>
-          </div>
-        </a>
-      </section>
-
-      <section className="home__notes" aria-label="Преимущества бренда">
-        <article className="note-card">
-          <span className="note-card__index">01</span>
-          <h2>Ткань и посадка</h2>
-          <p>
-            Натуральные материалы и продуманный крой для безупречного силуэта.
-          </p>
-        </article>
-
-        <article className="note-card">
-          <span className="note-card__index">02</span>
-          <h2>Лимитированные партии</h2>
-          <p>
-            Отобранные коллекции в небольших тиражах для более редкого образа.
-          </p>
-        </article>
-
-        <article className="note-card">
-          <span className="note-card__index">03</span>
-          <h2>Немного роскоши</h2>
-          <p>
-            Минималистичный дизайн, который выглядит дорого в любой обстановке.
-          </p>
-        </article>
       </section>
     </main>
   );

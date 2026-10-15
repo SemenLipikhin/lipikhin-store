@@ -1,11 +1,11 @@
 import { useState } from "react";
 import "./Header.css";
 const navigationItems = [
-  { href: "/collections", label: "Коллекции" },
-  { href: "/catalog/men", label: "Мужское" },
-  { href: "/catalog/women", label: "Женское" },
-  { href: "/catalog/accessories", label: "Аксессуары" },
-  { href: "/catalog/sale", label: "Распродажа" },
+  { href: `${import.meta.env.BASE_URL}collections`, label: "Коллекции" },
+  { href: `${import.meta.env.BASE_URL}catalog/men`, label: "Мужское" },
+  { href: `${import.meta.env.BASE_URL}catalog/women`, label: "Женское" },
+  { href: `${import.meta.env.BASE_URL}catalog/accessories`, label: "Аксессуары" },
+  { href: `${import.meta.env.BASE_URL}catalog/sale`, label: "Распродажа" },
 ];
 
 function Header() {
@@ -33,13 +33,13 @@ function Header() {
             <span></span>
           </button>
 
-          <a className="header__logo" href="/">
+          <a className="header__logo" href={`${import.meta.env.BASE_URL}`}>
             LIPIKHIN
           </a>
 
           <a
             className="header__action header__action--account"
-            href="/account"
+            href={`${import.meta.env.BASE_URL}account`}
             aria-label="Личный кабинет"
           >
             <svg viewBox="0 0 24 24" aria-hidden="true">
@@ -50,7 +50,7 @@ function Header() {
           </a>
         </div>
 
-        <a className="header__logo header__desktop-logo" href="/">
+        <a className="header__logo header__desktop-logo" href={`${import.meta.env.BASE_URL}`}>
           LIPIKHIN
         </a>
 
@@ -70,7 +70,7 @@ function Header() {
         <div className="header__actions">
           <a
             className="header__action"
-            href="/favorites"
+            href={`${import.meta.env.BASE_URL}favorites`}
             aria-label="Избранное"
           >
             <svg viewBox="0 0 24 24" aria-hidden="true">
@@ -78,7 +78,7 @@ function Header() {
             </svg>
           </a>
 
-          <a className="header__action" href="/cart" aria-label="Корзина">
+          <a className="header__action" href={`${import.meta.env.BASE_URL}cart`} aria-label="Корзина">
             <svg viewBox="0 0 24 24" aria-hidden="true">
               <path d="M5 7h14l1 14H4L5 7Z" />
               <path d="M9 8V6a3 3 0 0 1 6 0v2" />
@@ -87,7 +87,7 @@ function Header() {
 
           <a
             className="header__action"
-            href="/account"
+            href={`${import.meta.env.BASE_URL}account`}
             aria-label="Личный кабинет"
           >
             <svg viewBox="0 0 24 24" aria-hidden="true">
