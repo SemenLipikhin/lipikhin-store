@@ -1,0 +1,86 @@
+.account-page > p {
+  margin-top: 12px;
+  color: var(--gray);
+}
+
+.account-page > h1,
+.account-page > p { text-align: center; }
+
+.account-profile {
+  max-width: 720px;
+  margin: 36px auto 0;
+  padding: 28px;
+  border: 1px solid var(--gray-light);
+  border-radius: 12px;
+  background: var(--surface-raised);
+}
+
+.account-profile__heading h2 { font-size: 1.3rem; }
+.account-profile__heading p { margin-top: 8px; color: var(--gray); font-size: 0.85rem; }
+.account-profile__form { display: grid; gap: 8px; margin-top: 28px; }
+.account-profile__form label { font-size: 0.85rem; }
+.account-profile__form label:not(:first-child) { margin-top: 10px; }
+.account-profile__form input {
+  width: 100%;
+  min-height: 48px;
+  padding: 10px 14px;
+  border: 1px solid var(--gray-light);
+  border-radius: 8px;
+  background: var(--surface-raised);
+  color: var(--ink);
+}
+.account-profile__form input::placeholder { color: var(--gray); }
+.account-profile__form input[aria-invalid="true"] { border-color: var(--ink); }
+.account-profile__error { color: var(--danger); font-size: 0.78rem; }
+.account-profile__saved { display: grid; gap: 14px; margin-top: 26px; }
+.account-profile__saved > p { display: grid; gap: 4px; overflow-wrap: anywhere; }
+.account-profile__saved span { color: var(--gray); font-size: 0.78rem; }
+.account-profile__saved strong { font-weight: 500; }
+.account-profile__actions { display: flex; flex-wrap: wrap; align-items: center; gap: 18px; margin-top: 12px; }
+.account-profile__button {
+  min-height: 46px;
+  padding: 10px 20px;
+  border: 1px solid var(--ink);
+  border-radius: 8px;
+  background: var(--ink);
+  color: var(--surface-raised);
+  cursor: pointer;
+}
+.account-profile__text-button {
+  min-height: 44px;
+  padding: 8px 0;
+  border: 0;
+  background: transparent;
+  color: var(--ink);
+  text-decoration: underline;
+  text-underline-offset: 4px;
+  cursor: pointer;
+}
+.account-profile__button:hover { background: var(--ink-soft); }
+.account-profile__status { margin-top: 20px; color: var(--gray); font-size: 0.82rem; }
+
+.account-links {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 16px;
+  max-width: 720px;
+  margin: 24px auto 0;
+}
+
+.account-links a {
+  display: flex;
+  align-items: center;
+  min-height: 120px;
+  padding: 24px;
+  border: 1px solid var(--gray-light);
+  border-radius: 12px;
+  background: var(--surface-raised);
+}
+.account-links a:hover,
+.account-links a:focus-visible { border-color: var(--ink); }
+@media (max-width: 600px) {
+  .account-profile { padding: 20px; }
+  .account-links {
+    grid-template-columns: 1fr;
+  }
+}

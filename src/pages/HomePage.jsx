@@ -1,31 +1,32 @@
+import { Link } from "react-router";
 import "./HomePage.css";
 
 function HomePage() {
   return (
-    <main className="home container">
+    <main id="main-content" className="home container" tabIndex={-1}>
       <section className="hero" aria-labelledby="hero-title">
         <div className="hero__content">
-          <p className="hero__eyebrow">Curated essentials</p>
+          <p className="hero__eyebrow">Мужская и женская коллекции</p>
           <h1 id="hero-title" className="hero__title">
-            Luxury in every line.
+            Стиль в каждой детали
           </h1>
           <p className="hero__text">
-            Классическая элегантность, современная форма и материалы, которые
-            говорят без лишних слов.
+            Продуманные образы для него и для неё. Лаконичный крой,
+            спокойные оттенки и внимание к деталям.
           </p>
           <nav className="hero__actions" aria-label="Выбор коллекции">
-            <a
-              href={`${import.meta.env.BASE_URL}catalog/men`}
+            <Link
+              to="/catalog/men"
               className="hero__collection-link"
             >
               Мужское
-            </a>
-            <a
-              href={`${import.meta.env.BASE_URL}catalog/women`}
+            </Link>
+            <Link
+              to="/catalog/women"
               className="hero__collection-link"
             >
               Женское
-            </a>
+            </Link>
           </nav>
         </div>
 
@@ -49,7 +50,7 @@ function HomePage() {
               decoding="async"
             />
           </div>
-          <p className="hero__caption">Autumn 2026 <span>Collection</span></p>
+          <p className="hero__caption">Осень 2026 <span>Коллекция</span></p>
         </div>
       </section>
     </main>

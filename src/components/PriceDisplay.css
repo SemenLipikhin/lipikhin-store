@@ -1,0 +1,2 @@
+.price-display { display: inline-flex; flex-wrap: wrap; align-items: baseline; gap: 2px 10px; }
+.price-display__old { color: var(--gray); font-size: 0.9em; font-weight: 400; }

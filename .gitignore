@@ -24,3 +24,7 @@ dist-ssr
 *.sw?
 .env
 .env.*
+
+# Local Codex skills; the storefront does not use them at runtime.
+.agents/
+skills-lock.json

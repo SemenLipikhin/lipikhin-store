@@ -1,58 +1,39 @@
+import { Link } from "react-router";
 import "./Footer.css";
 
 function Footer() {
   return (
     <footer className="footer">
       <div className="container footer__inner">
-        <a className="footer__brand" href={`${import.meta.env.BASE_URL}`}>
+        <Link className="footer__brand" to="/">
           LIPIKHIN
-        </a>
+        </Link>
 
         <nav className="footer__nav" aria-label="Магазин">
           <p className="footer__heading">Магазин</p>
-          <a className="footer__link" href={`${import.meta.env.BASE_URL}catalog/men`}>
+          <Link className="footer__link" to="/catalog/men">
             Мужское
-          </a>
-          <a className="footer__link" href={`${import.meta.env.BASE_URL}catalog/women`}>
+          </Link>
+          <Link className="footer__link" to="/catalog/women">
             Женское
-          </a>
+          </Link>
+          <Link className="footer__link" to="/catalog/sale">
+            Распродажа
+          </Link>
         </nav>
 
-        <nav className="footer__nav" aria-label="Помощь">
-          <p className="footer__heading">Помощь</p>
-          <a className="footer__link" href={`${import.meta.env.BASE_URL}delivery`}>
-            Доставка
-          </a>
-          <a className="footer__link" href={`${import.meta.env.BASE_URL}returns`}>
-            Возврат
-          </a>
-          <a className="footer__link" href={`${import.meta.env.BASE_URL}size-guide`}>
-            Размеры
-          </a>
-          <a className="footer__link" href={`${import.meta.env.BASE_URL}contacts`}>
-            Контакты
-          </a>
+        <nav className="footer__nav" aria-label="Ваши товары">
+          <p className="footer__heading">Ваши товары</p>
+          <Link className="footer__link" to="/favorites">Избранное</Link>
+          <Link className="footer__link" to="/cart">Корзина</Link>
+          <Link className="footer__link" to="/account">Личный кабинет</Link>
         </nav>
 
-        <div className="footer__subscribe">
-          <p className="footer__heading">Подпишитесь на новости</p>
+        <div className="footer__about">
+          <p className="footer__heading">О проекте</p>
           <p className="footer__description">
-            Новые коллекции, закрытые продажи и истории бренда.
+            Каталог демонстрационный. Оформление заказов и оплата не подключены.
           </p>
-
-          <label className="footer__label" htmlFor="newsletter-email">
-            Email
-          </label>
-          <input
-            className="footer__input"
-            id="newsletter-email"
-            name="email"
-            type="email"
-            autoComplete="email"
-            placeholder="Ваш email"
-            disabled
-          />
-          <p className="footer__note">Подписка скоро появится.</p>
         </div>
       </div>
 
